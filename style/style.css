@@ -1,0 +1,211 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #ff6b00;
+}
+
+/* HERO */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1601758003122-53c40e686a19") center/cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff6b00;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e65c00;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px;
+    text-align: center;
+}
+
+/* GRID */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* SERVIÇOS */
+.servico {
+    background: white;
+    padding: 25px;
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.servico:hover {
+    transform: translateY(-5px);
+}
+
+/* CARDS PETS */
+.card {
+    width: 250px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+}
+
+.btn-card {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background: #0066cc;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-card:hover {
+    background: #004999;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background: #ff6b00;
+    color: white;
+    padding: 40px;
+}
+
+/* CONTATO */
+.contato {
+    background: #fff;
+}
+
+/* FOOTER */
+.footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/* LOGO */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* MENU LINK HOVER */
+.menu a:hover {
+    color: #ff6b00;
+}
+
+/* BOTÃO HERO */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ff6b00;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* BOTÃO CARD */
+.btn-card {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background: #0066cc;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+}

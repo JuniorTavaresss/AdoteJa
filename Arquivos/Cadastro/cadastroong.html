@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de ONG | AdoteJá</title>
+
+<!-- CSS CORRETO -->
+<link rel="stylesheet" href="../Cadastro/cadastroong.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- LOGO GLOBAL (VOLTA PRO INÍCIO) -->
+<a href="../../Index.html" class="logo-topo">🐶 AdoteJá</a>
+
+<div class="container">
+
+    <div class="box">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🐶 AdoteJá</h1>
+            <p>Cadastre sua ONG 🏢</p>
+        </div>
+
+        <!-- FORM -->
+        <form onsubmit="return cadastrarONG(event)">
+
+            <div class="input-group">
+                <label>Nome da ONG</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>E-mail</label>
+                <input type="email" required>
+            </div>
+
+            <div class="input-group">
+                <label>Telefone</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>Cidade</label>
+                <input type="text" required>
+            </div>
+
+            <div class="input-group">
+                <label>Senha</label>
+                <input type="password" required>
+            </div>
+
+            <div class="input-group">
+                <label>Confirmar senha</label>
+                <input type="password" required>
+            </div>
+
+            <button type="submit">Cadastrar ONG</button>
+
+        </form>
+
+        <!-- VOLTAR (CAMINHO CORRETO) -->
+        <div class="footer">
+            Já tem conta? <a href="../TelaCadastro/telacadastro.html">Entrar</a>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+function cadastrarONG(event) {
+    event.preventDefault();
+
+    alert("ONG cadastrada com sucesso! 🏢");
+
+    window.location.href = "../telacadastro.html";
+}
+</script>
+
+</body>
+</html>
