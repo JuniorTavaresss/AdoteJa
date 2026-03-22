@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fb;
+}
+
+/* MENU */
+.menu {
+    background: #0066cc;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .logo {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.ativo {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+/* PERFIL */
+.perfil {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.card-perfil {
+    background: white;
+    border-radius: 15px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* FOTO */
+.foto {
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* INFO */
+.info h1 {
+    margin-bottom: 15px;
+}
+
+.info p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.descricao {
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* BOTÃO */
+.btn-contato {
+    display: inline-block;
+    margin-top: 20px;
+    background: #0066cc;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-contato:hover {
+    background: #004999;
+}

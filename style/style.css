@@ -216,3 +216,6 @@ section {
 .btn-login {
     background: #0066cc;
 }
+.menu ul li a:hover {
+    color: #0066cc;
+}
