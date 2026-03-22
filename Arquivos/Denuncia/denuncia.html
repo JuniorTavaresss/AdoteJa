@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Denúncia | AdoteJá</title>
+
+<link rel="stylesheet" href="denuncia.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+<!-- LOGO -->
+<a href="../../Index.html" class="logo-topo">🐶 AdoteJá</a>
+
+<div class="container">
+
+    <div class="header">
+        <h2>🚨 Denunciar Maus-Tratos</h2>
+        <p>Ajude a proteger os animais. Sua denúncia pode ser anônima.</p>
+    </div>
+
+    <form id="denunciaForm">
+
+        <div class="input-group">
+            <label>Tipo de denúncia</label>
+            <select required>
+                <option value="">Selecione</option>
+                <option>Maus-tratos</option>
+                <option>Abandono</option>
+                <option>Negligência</option>
+                <option>Outros</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Endereço do ocorrido</label>
+            <input type="text" placeholder="Rua, número, bairro..." required>
+        </div>
+
+        <div class="input-group">
+            <label>Descrição</label>
+            <textarea rows="4" placeholder="Descreva o que está acontecendo..." required></textarea>
+        </div>
+
+        <div class="input-group">
+            <label>Foto (opcional)</label>
+            <input type="file">
+        </div>
+
+        <div class="input-group">
+            <label>
+                <input type="checkbox"> Enviar denúncia anonimamente
+            </label>
+        </div>
+
+        <button type="submit" class="btn">
+            <i class="fas fa-exclamation-triangle"></i> Enviar denúncia
+        </button>
+
+    </form>
+
+    <div class="alerta">
+        ⚠️ Em casos graves, ligue para autoridades locais imediatamente.
+    </div>
+
+</div>
+
+<script>
+document.getElementById('denunciaForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert("Denúncia enviada com sucesso! Obrigado por ajudar 🐶");
+});
+</script>
+
+</body>
+</html>

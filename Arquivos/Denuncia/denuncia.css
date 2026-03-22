@@ -1,0 +1,106 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #0066cc, #003366);
+    height: 100vh;
+}
+
+/* LOGO TOPO */
+.logo-topo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-topo:hover {
+    color: #ffcc00;
+}
+
+/* CONTAINER IGUAL LOGIN */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: #0066cc;
+}
+
+.header p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* INPUTS */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+    border-color: #0066cc;
+}
+
+/* BOTÃO IGUAL LOGIN */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #0066cc;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #004999;
+}
+
+/* ALERTA */
+.alerta {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+}

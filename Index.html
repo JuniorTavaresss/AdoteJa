@@ -4,55 +4,67 @@
 <meta charset="UTF-8">
 <title>AdoteJá</title>
 
-<!-- CAMINHO SIMPLES -->
 <link rel="stylesheet" href="style/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- TOPO -->
+<div class="topo">
+    🐾 Adoção responsável • Denuncie maus-tratos • Ajude ONGs
+</div>
+
 <!-- MENU -->
 <nav class="menu">
-
-    <!-- LOGO CLICÁVEL -->
     <a href="index.html" class="logo">🐶 AdoteJá</a>
 
     <ul>
-        <li><a href="index.html">Início</a></li>
+        <li><a href="#">Início</a></li>
         <li><a href="Arquivos/Adoçao/adocao.html">Adotar</a></li>
+        <li><a href="Arquivos/Denuncia/denuncia.html">Denúncias</a></li>
         <li><a href="#">ONGs</a></li>
-        <li><a href="Arquivos/TelaCadastro/telacadastro.html">Login</a></li>
-        <li><a href="#">Contato</a></li>
+        <li><a href="Arquivos/TelaCadastro/telacadastro.html" class="btn-login">Login</a></li>
     </ul>
 </nav>
 
 <!-- HERO -->
 <header class="hero">
-    <div class="hero-content">
-        <h1>Encontre seu novo melhor amigo ❤️</h1>
-        <p>Adoção responsável com ONGs verificadas</p>
+    <div class="overlay"></div>
 
-        <!-- BOTÃO FUNCIONANDO -->
-        <a href="Arquivos/Adoçao/adocao.html" class="btn">
-            Ver Pets 🐶
-        </a>
+    <div class="hero-content">
+        <h1>Dê um lar para quem precisa ❤️</h1>
+        <p>Conectamos você a pets e ONGs com segurança</p>
+
+        <div class="hero-buttons">
+            <a href="Arquivos/Adoçao/adocao.html" class="btn">Adotar agora</a>
+            <a href="Arquivos/Denuncia/denuncia.html" class="btn-outline">Denunciar</a>
+        </div>
     </div>
 </header>
 
-<!-- SERVIÇOS -->
-<section class="servicos">
-    <h2>Nossos Serviços</h2>
+<!-- ESTATÍSTICAS -->
+<section class="stats">
+    <div><h2>+170</h2><p>Adoções</p></div>
+    <div><h2>+500</h2><p>Resgates</p></div>
+    <div><h2>+1200</h2><p>Atendimentos</p></div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="beneficios">
+    <h2>Por que usar o AdoteJá?</h2>
 
     <div class="grid">
-        <div class="servico">🐾 Adoção</div>
-        <div class="servico">🚨 Denúncias</div>
-        <div class="servico">💉 Castração</div>
-        <div class="servico">🔍 Pets Perdidos</div>
+        <div class="beneficio">✔️ ONGs verificadas</div>
+        <div class="beneficio">✔️ Adoção segura</div>
+        <div class="beneficio">✔️ Denúncia anônima</div>
+        <div class="beneficio">✔️ Plataforma gratuita</div>
     </div>
 </section>
 
 <!-- PETS -->
 <section class="pets">
-    <h2>Pets para adoção</h2>
+    <h2>Pets esperando por você 🐶</h2>
 
     <div class="grid">
 
@@ -60,8 +72,9 @@
             <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
             <div class="info">
                 <h3>Marley</h3>
-                <p>1 ano • Médio • Macho</p>
-                <a href="Arquivos/Adoçao/adocao.html" class="btn-card">Adotar</a>
+                <p>🐶 1 ano • Médio</p>
+                <p>Amoroso e brincalhão</p>
+                <a href="#" class="btn-card">Adotar</a>
             </div>
         </div>
 
@@ -69,42 +82,64 @@
             <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
             <div class="info">
                 <h3>Thor</h3>
-                <p>3 anos • Grande • Macho</p>
-                <a href="Arquivos/Adoçao/adocao.html" class="btn-card">Adotar</a>
+                <p>🐶 3 anos • Grande</p>
+                <p>Protetor e fiel</p>
+                <a href="#" class="btn-card">Adotar</a>
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- ESTATÍSTICAS -->
-<section class="stats">
-    <div>
-        <h3>+170</h3>
-        <p>Adoções</p>
-    </div>
+<!-- ONGs -->
+<section class="ongs">
+    <h2>ONGs parceiras 🏢</h2>
 
-    <div>
-        <h3>+500</h3>
-        <p>Castrações</p>
-    </div>
+    <div class="grid">
+        <div class="card">
+            <div class="info">
+                <h3>Amor Animal</h3>
+                <p>+200 resgates</p>
+            </div>
+        </div>
 
-    <div>
-        <h3>+1200</h3>
-        <p>Atendimentos</p>
+        <div class="card">
+            <div class="info">
+                <h3>Lar dos Bichos</h3>
+                <p>+150 adoções</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- CONTATO -->
-<section class="contato">
-    <h2>Contato</h2>
-    <p>Email: contato@adoteja.com</p>
-    <p>Telefone: (48) 99999-9999</p>
+<!-- CTA FINAL -->
+<section class="cta">
+    <h2>Pronto para mudar uma vida?</h2>
+    <a href="Arquivos/Adoçao/adocao.html" class="btn">Ver pets agora</a>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-    <p>© 2026 AdoteJá • Todos os direitos reservados</p>
+    <div class="footer-grid">
+        <div>
+            <h3>🐶 AdoteJá</h3>
+            <p>Ajudando animais a encontrar um lar</p>
+        </div>
+
+        <div>
+            <h4>Links</h4>
+            <a href="#">Início</a>
+            <a href="#">Adotar</a>
+            <a href="#">Denúncias</a>
+        </div>
+
+        <div>
+            <h4>Contato</h4>
+            <p>contato@adoteja.com</p>
+        </div>
+    </div>
+
+    <p class="copy">© 2026 AdoteJá</p>
 </footer>
 
 </body>
