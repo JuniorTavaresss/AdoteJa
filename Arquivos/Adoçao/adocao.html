@@ -1,220 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Adoção | AdoteJá</title>
-<link rel="stylesheet" href="../Adoçao/adocao.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção | AdoteJá</title>
+    <link rel="stylesheet" href="../Adoçao/adocao.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
+<!-- HEADER AZUL -->
 <header class="navbar">
-    <div class="logo">🐶 AdoteJá</div>
+    <!-- LOGO GLOBAL (VOLTA PRO INÍCIO) -->
+    <a href="../../Index.html" class="logo-topo">🐶 AdoteJá</a>
+    <nav class="nav-links">
+    </nav>
 </header>
 
-<!-- FILTROS -->
+<!-- FILTROS - ÁREA AZUL -->
 <section class="filtros">
-    <h2>Encontre seu pet ideal</h2>
+    <div class="filtros-container">
+        <h2>Encontre seu pet ideal</h2>
+        <div class="filtro-box">
+            <select id="filtroTamanho">
+                <option value="">Tamanho</option>
+                <option value="Pequeno">Pequeno</option>
+                <option value="Médio">Médio</option>
+                <option value="Grande">Grande</option>
+            </select>
 
-    <div class="filtro-box">
-        <select>
-            <option>Tamanho</option>
-            <option>Pequeno</option>
-            <option>Médio</option>
-            <option>Grande</option>
-        </select>
+            <select id="filtroRaca">
+                <option value="">Raça</option>
+                <option value="Vira-lata">Vira-lata</option>
+                <option value="Labrador">Labrador</option>
+                <option value="Pitbull">Pitbull</option>
+            </select>
 
-        <select>
-            <option>Raça</option>
-            <option>Vira-lata</option>
-            <option>Labrador</option>
-            <option>Pitbull</option>
-        </select>
+            <select id="filtroCastrado">
+                <option value="">Castrado</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
 
-        <select>
-            <option>Castrado</option>
-            <option>Sim</option>
-            <option>Não</option>
-        </select>
+            <select id="filtroCidade">
+                <option value="">Cidade</option>
+                <option value="Araranguá - SC">Araranguá - SC</option>
+                <option value="Criciúma - SC">Criciúma - SC</option>
+                <option value="Florianópolis - SC">Florianópolis - SC</option>
+            </select>
 
-        <select>
-            <option>Cidade</option>
-            <option>Araranguá - SC</option>
-            <option>Criciúma - SC</option>
-            <option>Florianópolis - SC</option>
-        </select>
-
-        <button>Filtrar</button>
+            <button id="btnFiltrar">Filtrar</button>
+            <button id="btnLimparFiltros" class="btn-limpar">Limpar</button>
+        </div>
     </div>
 </section>
 
 <!-- LISTA DE PETS -->
 <section class="lista-pets">
-
-    <div class="grid">
-
-        <!-- CARD 1 -->
-        <div class="card">
-            <span class="badge">Disponível</span>
-            <span class="favorito">❤️</span>
-
-            <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16">
-
-            <div class="info">
-                <h3>Marley</h3>
-
-                <div class="dados">
-                    <p>🐶 Macho</p>
-                    <p>🎂 1 ano</p>
-                    <p>📏 Médio</p>
-                    <p>📍 Araranguá - SC</p>
-                </div>
-
-                <button>Adotar</button>
-            </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="card">
-            <span class="badge">Disponível</span>
-            <span class="favorito">❤️</span>
-
-            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d">
-
-            <div class="info">
-                <h3>Thor</h3>
-
-                <div class="dados">
-                    <p>🐶 Macho</p>
-                    <p>🎂 3 anos</p>
-                    <p>📏 Grande</p>
-                    <p>📍 Criciúma - SC</p>
-                </div>
-
-                <button>Adotar</button>
-            </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="card">
-            <span class="badge">Disponível</span>
-            <span class="favorito">❤️</span>
-
-            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e">
-
-            <div class="info">
-                <h3>Kiara</h3>
-
-                <div class="dados">
-                    <p>🐶 Fêmea</p>
-                    <p>🎂 2 anos</p>
-                    <p>📏 Pequeno</p>
-                    <p>📍 Florianópolis - SC</p>
-                </div>
-
-                <button>Adotar</button>
-            </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="card">
-            <span class="badge">Disponível</span>
-            <span class="favorito">❤️</span>
-
-            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b">
-
-            <div class="info">
-                <h3>Bob</h3>
-
-                <div class="dados">
-                    <p>🐶 Macho</p>
-                    <p>🎂 4 anos</p>
-                    <p>📏 Médio</p>
-                    <p>📍 Araranguá - SC</p>
-                </div>
-
-                <button>Adotar</button>
-            </div>
-        </div>
-
-        <!-- CARD 5 -->
-        <div class="card">
-            <span class="badge">Disponível</span>
-            <span class="favorito">❤️</span>
-
-            <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b">
-
-            <div class="info">
-                <h3>Luna</h3>
-
-                <div class="dados">
-                    <p>🐶 Fêmea</p>
-                    <p>🎂 1 ano</p>
-                    <p>📏 Pequeno</p>
-                    <p>📍 Criciúma - SC</p>
-                </div>
-
-                <button>Adotar</button>
-            </div>
-        </div>
-
-        <!-- CARD 6 -->
-        <div class="card">
-            <span class="badge">Disponível</span>
-            <span class="favorito">❤️</span>
-
-            <img src="https://images.unsplash.com/photo-1601758123927-196f47c8f0c8">
-
-            <div class="info">
-                <h3>Max</h3>
-
-                <div class="dados">
-                    <p>🐶 Macho</p>
-                    <p>🎂 5 anos</p>
-                    <p>📏 Grande</p>
-                    <p>📍 Florianópolis - SC</p>
-                </div>
-
-                <button>Adotar</button>
-            </div>
-        </div>
-
+    <div class="grid" id="gridPets">
+        <!-- Os cards serão gerados dinamicamente pelo JavaScript -->
     </div>
-
 </section>
 
-<!-- RODAPÉ -->
+<!-- RODAPÉ SIMPLES E REDUZIDO -->
 <footer class="footer">
-
-    <div class="footer-container">
-
-        <div>
-            <h3>🐶 AdoteJá</h3>
-            <p>Conectando pessoas a animais que precisam de um lar.</p>
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>🐾 AdoteJá © 2026 | Transformando vidas através da adoção responsável</p>
+            <p>contato@adoteja.com | (48) 99999-9999</p>
         </div>
-
-        <div>
-            <h3>Links</h3>
-            <a href="#">Início</a>
-            <a href="#">Adotar</a>
-            <a href="#">ONGs</a>
-            <a href="#">Contato</a>
-        </div>
-
-        <div>
-            <h3>Contato</h3>
-            <p>Email: contato@adoteja.com</p>
-            <p>Telefone: (48) 99999-9999</p>
-        </div>
-
     </div>
-
-    <div class="footer-bottom">
-        © 2026 AdoteJá • Todos os direitos reservados
-    </div>
-
 </footer>
 
+<script src="adocao.js"></script>
 </body>
 </html>
