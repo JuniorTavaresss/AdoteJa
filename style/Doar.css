@@ -1,0 +1,153 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+/* HEADER */
+.header {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* TÍTULO */
+.container h2 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.container p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* VALORES */
+.valores {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.valores button {
+    width: 22%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #003366;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.valores button:hover {
+    background: #003366;
+    color: white;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* BOTÃO */
+.btn-doar {
+    width: 100%;
+    padding: 15px;
+    background: #ff6b00;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-doar:hover {
+    background: #e65c00;
+}
+
+/* INFO */
+.info {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: space-between; /* logo esquerda / menu direita */
+    align-items: center;
+    padding: 15px 40px;
+    background: #003366; /* azul */
+}
+
+/* LOGO (AdoteJá) */
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* LISTA */
+.menu ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+/* LINKS */
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* HOVER LINKS */
+.menu ul li a:hover {
+    color: #ff6b00; /* laranja */
+}
+
+/* BOTÃO LOGIN */
+.btn-login {
+    background: #ff6b00;
+    padding: 8px 15px;
+    border-radius: 8px;
+    color: white !important;
+}
+
+/* HOVER LOGIN */
+.btn-login:hover {
+    background: #e65c00;
+}
