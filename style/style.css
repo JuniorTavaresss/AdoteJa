@@ -1,55 +1,4 @@
-/* TOPO */
-.topo {
-    background: #002244;
-    color: white;
-    text-align: center;
-    padding: 8px;
-    font-size: 14px;
-}
-
-/* BOTÃO LOGIN */
-.btn-login {
-    background: #ff6b00;
-    padding: 8px 15px;
-    border-radius: 8px;
-}
-
-/* HERO BOTÕES */
-.hero-buttons {
-    margin-top: 20px;
-}
-
-.btn-outline {
-    margin-left: 10px;
-    padding: 12px 20px;
-    border: 2px solid white;
-    color: white;
-    text-decoration: none;
-}
-
-/* STATS */
-.stats {
-    display: flex;
-    justify-content: space-around;
-    background: #0066cc;
-    color: white;
-    padding: 40px;
-}
-
-/* BENEFÍCIOS */
-.beneficio {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* CTA */
-.cta {
-    text-align: center;
-    padding: 60px;
-    background: #ff6b00;
-    color: white;
-}
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -57,36 +6,70 @@
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", Arial, sans-serif;
 }
 
-/* MENU */
-.menu {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
+/* 🔥 TOPO EM LINHA (CORRETO) */
+.topo-acoes {
     background: linear-gradient(135deg, #003366, #0066cc);
+    padding: 15px 30px;
+
+    display: flex;
+    align-items: center; /* centraliza na altura */
 }
 
+/* LOGO (ESQUERDA) */
 .logo {
     color: white;
-    text-decoration: none;
+    font-size: 24px;
     font-weight: bold;
 }
 
-.menu ul {
+/* BOTÕES CENTRALIZADOS */
+.menu-acoes {
     display: flex;
-    gap: 20px;
-    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    flex: 1; /* ESSENCIAL pra centralizar */
 }
 
-.menu a {
+/* BOTÕES */
+.item {
+    width: 95px;
+    height: 85px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HOVER */
+.item:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-4px);
+}
+
+/* ÍCONE */
+.item img {
+    width: 35px;
+    margin-bottom: 8px;
+}
+
+/* TEXTO */
+.item p {
+    font-size: 11px;
+    font-weight: bold;
     color: white;
-    text-decoration: none;
-}
-
-.menu a:hover {
-    color: #ff6b00;
+    text-align: center;
 }
 
 /* HERO */
@@ -110,112 +93,22 @@ body {
     top: 40%;
 }
 
+/* BOTÕES */
 .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px;
+    padding: 12px 20px;
     background: #ff6b00;
     color: white;
     border-radius: 8px;
     text-decoration: none;
 }
 
-/* SECTIONS */
-section {
-    padding: 60px;
-    text-align: center;
-}
-
-/* GRID */
-.grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* PASSOS */
-.passo {
-    background: white;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* SERVIÇOS */
-.servico {
-    padding: 20px;
-    background: #0066cc;
+.btn-outline {
+    margin-left: 10px;
+    padding: 12px 20px;
+    border: 2px solid white;
     color: white;
-    border-radius: 10px;
     text-decoration: none;
-}
-
-/* PETS */
-.pets {
-    background: #f5f5f5;
-}
-
-.card {
-    width: 260px;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.info {
-    padding: 15px;
-}
-
-.btn-card {
-    display: block;
-    margin-top: 10px;
-    padding: 10px;
-    background: #0066cc;
-    color: white;
     border-radius: 8px;
-    text-decoration: none;
-}
-
-/* DESTAQUE */
-.destaque {
-    background: linear-gradient(135deg, #0066cc, #003366);
-    color: white;
-}
-
-/* FOOTER */
-.footer {
-    background: #002244;
-    color: white;
-    padding: 40px;
-}
-
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer a {
-    color: #ccc;
-    text-decoration: none;
-}
-
-.copy {
-    text-align: center;
-    margin-top: 20px;
-}
-.btn-login {
-    background: #0066cc;
-}
-.menu ul li a:hover {
-    color: #0066cc;
 }
