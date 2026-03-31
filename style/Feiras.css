@@ -1,0 +1,155 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #003366;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #ff6b00;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(90deg, #003366, #0057ad);
+    color: white;
+}
+
+/* EVENTOS */
+.eventos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+    width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* BOTÃO */
+.card button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    background: #ff6b00;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #e65c00;
+}
+
+/* AVISO */
+.aviso {
+    text-align: center;
+    padding: 20px;
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* POPUP */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* CAIXA */
+.popup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    animation: aparecer 0.3s ease;
+}
+
+.popup-box button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff6b00;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feiras e Eventos | AdoteJá</title>
+
+<link rel="stylesheet" href="../style/Feiras.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav class="menu">
+    <a href="../Index.html" class="logo">🐶 AdoteJá</a>
+
+    <ul>
+        <li><a href="../Index.html">Início</a></li>
+        <li><a href="../html/adocao.html">Adotar</a></li>
+        <li><a href="../html/doar.html">Doar</a></li>
+        <li><a href="../html/feiras.html">Feiras</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="header">
+    <h1>🐾 Feiras e Eventos Pet</h1>
+    <p>Eventos de adoção e castração gratuita em Criciúma</p>
+</header>
+
+<!-- EVENTOS -->
+<section class="eventos">
+
+    <div class="card">
+        <h2>📍 Praça Altair Guidi</h2>
+        <p><strong>Evento:</strong> Feira de Adoção</p>
+        <p><strong>Serviços:</strong> Adoção gratuita de cães</p>
+        <p><strong>Data:</strong> Todo sábado</p>
+        <p><strong>Horário:</strong> 09:00 às 16:00</p>
+        <button onclick="abrirPopup()">Quero participar</button>
+    </div>
+
+    <div class="card">
+        <h2>📍 Praça das Nações</h2>
+        <p><strong>Evento:</strong> Castração e Adoção</p>
+        <p><strong>Serviços:</strong> Castração gratuita + adoção</p>
+        <p><strong>Data:</strong> Domingos alternados</p>
+        <p><strong>Horário:</strong> 08:00 às 15:00</p>
+        <button onclick="abrirPopup()">Quero participar</button>
+    </div>
+
+</section>
+
+<!-- AVISO -->
+<section class="aviso">
+    ⚠️ Os eventos podem sofrer alterações. Confirme com a organização.
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-box">
+        <h2>🎉 Obrigado!</h2>
+        <p>Seu interesse foi registrado com sucesso.</p>
+        <p>Nos vemos no evento 🐶❤️</p>
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function abrirPopup() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+function fecharPopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+/* FECHAR CLICANDO FORA */
+window.onclick = function(event) {
+    let popup = document.getElementById("popup");
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
