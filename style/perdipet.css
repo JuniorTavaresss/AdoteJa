@@ -1,0 +1,86 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+/* MENU */
+.menu {
+    background: #003366;
+    padding: 15px 40px;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(90deg, #003366, #0057ad);
+    color: white;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #003366;
+}
+
+/* INPUT */
+input, textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* TEXTAREA */
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* BOTÃO */
+button {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ff6b00;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e65c00;
+}
