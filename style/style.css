@@ -237,4 +237,15 @@ body {
 .stats p {
     color: #666;
     font-size: 12px;
+} 
+
+.usuario-email {
+    color: white;
+    font-weight: 500;
+}
+
+#areaUsuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

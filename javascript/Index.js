@@ -47,3 +47,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+window.onload = function () {
+    const usuario = localStorage.getItem("usuarioLogado");
+    const area = document.getElementById("areaUsuario");
+
+    if (usuario && area) {
+        area.innerHTML = `
+            <span class="usuario-email">${usuario}</span>
+            <a href="#" id="btnLogout" class="btn-login">Sair</a>
+        `;
+
+        document.getElementById("btnLogout").addEventListener("click", logout);
+    }
+};
+
+function logout() {
+    localStorage.removeItem("usuarioLogado");
+    window.location.reload();
+}
