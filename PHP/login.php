@@ -1,25 +1,43 @@
-<script>
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+<?php
+session_start();
+include "conexao.php";
 
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('password').value;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    fetch('../php/login.php', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: `email=${email}&senha=${senha}`
-    })
-    .then(res => res.text())
-    .then(data => {
-        if (data === "sucesso") {
-            localStorage.setItem("usuarioLogado", email);
-            window.location.href = "../index.html";
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $sql = "SELECT * FROM usuarios WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+
+    $resultado = $stmt->get_result();
+
+    if ($resultado->num_rows > 0) {
+        $usuario = $resultado->fetch_assoc();
+
+        if (password_verify($senha, $usuario['senha'])) {
+
+            $_SESSION['id'] = $usuario['id'];
+            $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['email'] = $usuario['email'];
+
+            header("Location: index.php");
+            exit;
+
         } else {
-            alert("Email ou senha inválidos");
+            echo "Senha incorreta!";
         }
-    });
-});
-</script>
+    } else {
+        echo "Email não encontrado!";
+    }
+
+    $stmt->close();
+    $_SESSION["email"] = $email;
+
+header("Location: index.php");
+exit;
+}
+?>
+

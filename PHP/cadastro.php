@@ -1,30 +1,24 @@
 <?php
+session_start();
+include "conexao.php";
 
-$conn = new mysqli("localhost", "root", "", "adoteja");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-if ($conn->connect_error) {
-    die("Erro de conexão");
-}
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+    $sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
 
-// verifica se já existe
-$sql_verifica = "SELECT * FROM usuarios WHERE email='$email'";
-$result = $conn->query($sql_verifica);
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $nome, $email, $senha);
 
-if ($result->num_rows > 0) {
-    echo "existe";
-} else {
-    // salva novo usuário
-    $sql = "INSERT INTO usuarios (email, senha) VALUES ('$email', '$senha')";
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "sucesso";
+    if ($stmt->execute()) {
+        echo "Cadastro realizado com sucesso! <a href='login.html'>Fazer login</a>";
     } else {
-        echo "erro";
+        echo "Erro ao cadastrar: " . $stmt->error;
     }
-}
 
-$conn->close();
+    $stmt->close();
+}
 ?>
