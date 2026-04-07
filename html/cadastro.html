@@ -26,36 +26,35 @@
         </div>
 
         <!-- FORM -->
-        <form>
+<form action="../php/salvar_usuario.php" method="POST">
+    <div class="input-group">
+        <label>Nome completo</label>
+        <input type="text" name="nome" placeholder="Seu nome" required>
+    </div>
 
-            <div class="input-group">
-                <label>Nome completo</label>
-                <input type="text" placeholder="Seu nome" required>
-            </div>
+    <div class="input-group">
+        <label>E-mail</label>
+        <input type="email" name="email" placeholder="seu@email.com" required>
+    </div>
 
-            <div class="input-group">
-                <label>E-mail</label>
-                <input type="email" placeholder="seu@email.com" required>
-            </div>
+    <div class="input-group">
+        <label>Senha</label>
+        <input type="password" name="senha" placeholder="••••••••" required>
+    </div>
 
-            <div class="input-group">
-                <label>Senha</label>
-                <input type="password" placeholder="••••••••" required>
-            </div>
+    <div class="input-group">
+        <label>Confirmar senha</label>
+        <input type="password" name="confirmar_senha" placeholder="••••••••" required>
+    </div>
 
-            <div class="input-group">
-                <label>Confirmar senha</label>
-                <input type="password" placeholder="••••••••" required>
-            </div>
+    <div class="input-group">
+        <label>Cidade</label>
+        <input type="text" name="cidade" placeholder="Sua cidade" required>
+    </div>
 
-            <div class="input-group">
-                <label>Cidade</label>
-                <input type="text" placeholder="Sua cidade" required>
-            </div>
+    <button type="submit">Cadastrar</button>
 
-            <button type="submit">Cadastrar</button>
-
-        </form>
+</form>
 
         <!-- VOLTAR -->
         <div class="footer">
@@ -63,38 +62,6 @@
         </div>
 
     </div>
-
-    <script>
-document.getElementById("formCadastro").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("password").value;
-
-    fetch("../php/cadastro.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: `email=${email}&senha=${senha}`
-    })
-    .then(res => res.text())
-    .then(data => {
-        if (data === "sucesso") {
-            alert("Cadastro realizado!");
-
-            // já loga automaticamente
-            localStorage.setItem("usuarioLogado", email);
-
-            window.location.href = "../index.html";
-        } else if (data === "existe") {
-            alert("Email já cadastrado!");
-        } else {
-            alert("Erro ao cadastrar");
-        }
-    });
-});
-</script>
 
 </div>
 
