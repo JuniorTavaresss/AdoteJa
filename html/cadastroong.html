@@ -27,41 +27,42 @@
         </div>
 
         <!-- FORM -->
-        <form onsubmit="return cadastrarONG(event)">
+<form action="../php/salvar_ong.php" method="POST">
 
-            <div class="input-group">
-                <label>Nome da ONG</label>
-                <input type="text" required>
-            </div>
+    <div class="input-group">
+        <label>Nome da ONG</label>
+        <input type="text" name="nome" placeholder="Nome da sua ONG" required>
+    </div>
 
-            <div class="input-group">
-                <label>E-mail</label>
-                <input type="email" required>
-            </div>
+    <div class="input-group">
+        <label>E-mail</label>
+        <input type="email" name="email" placeholder="seu@email.com" required>
+    </div>
 
-            <div class="input-group">
-                <label>Telefone</label>
-                <input type="text" required>
-            </div>
+    <div class="input-group">
+        <label>Telefone</label>
+        <input type="text" name="telefone" placeholder="Seu telefone" required>
+    </div>
 
-            <div class="input-group">
-                <label>Cidade</label>
-                <input type="text" required>
-            </div>
+    <div class="input-group">
+        <label>Senha</label>
+        <input type="password" name="senha" placeholder="••••••••" required>
+    </div>
 
-            <div class="input-group">
-                <label>Senha</label>
-                <input type="password" required>
-            </div>
+    <div class="input-group">
+        <label>Confirmar senha</label>
+        <input type="password" name="confirmar_senha" placeholder="••••••••" required>
+    </div>
 
-            <div class="input-group">
-                <label>Confirmar senha</label>
-                <input type="password" required>
-            </div>
+    <div class="input-group">
+        <label>Cidade</label>
+        <input type="text" name="cidade" placeholder="Sua cidade" required>
+    </div>
 
-            <button type="submit">Cadastrar ONG</button>
+    <button type="submit">Cadastrar</button>
 
-        </form>
+</form>
+
 
         <!-- VOLTAR (CAMINHO CORRETO) -->
         <div class="footer">

@@ -3,11 +3,12 @@
 $conn = new mysqli("localhost", "root", "", "adocao_pets_db");
 
 if ($conn->connect_error) {
-    die("Erro: " . $conn->connect_error);
+    die("Erro na conexão: " . $conn->connect_error);
 }
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
+$telefone = $_POST['telefone'];
 $senha = $_POST['senha'];
 $confirmar = $_POST['confirmar_senha'];
 $cidade = $_POST['cidade'];
@@ -18,8 +19,8 @@ if ($senha !== $confirmar) {
 
 $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO Usuario (nome, email, senha, cidade)
-        VALUES ('$nome', '$email', '$senha_hash', '$cidade')";
+$sql = "INSERT INTO usuario_ong (nome, email, senha, cidade, telefone)
+        VALUES ('$nome', '$email', '$senha_hash', '$cidade', '$telefone')";
 
 if ($conn->query($sql) === TRUE) {
     echo "<script>
