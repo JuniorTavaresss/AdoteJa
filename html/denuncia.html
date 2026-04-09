@@ -23,45 +23,48 @@
         <p>Ajude a proteger os animais. Sua denúncia pode ser anônima.</p>
     </div>
 
-    <form id="denunciaForm">
+    <!-- FORM -->
+<form id="denunciaForm" action="../php/salvar_denuncia.php" method="POST" enctype="multipart/form-data">
 
-        <div class="input-group">
-            <label>Tipo de denúncia</label>
-            <select required>
-                <option value="">Selecione</option>
-                <option>Maus-tratos</option>
-                <option>Abandono</option>
-                <option>Negligência</option>
-                <option>Outros</option>
-            </select>
-        </div>
+    <div class="input-group">
+        <label>Tipo de denúncia</label>
+        <select name="tipo_denuncia" required>
+            <option value="">Selecione</option>
+            <option value="Maus-tratos">Maus-tratos</option>
+            <option value="Abandono">Abandono</option>
+            <option value="Negligência">Negligência</option>
+            <option value="Outros">Outros</option>
+        </select>
+    </div>
 
-        <div class="input-group">
-            <label>Endereço do ocorrido</label>
-            <input type="text" placeholder="Rua, número, bairro..." required>
-        </div>
+    <div class="input-group">
+        <label>Endereço do ocorrido</label>
+        <input type="text" name="endereco" placeholder="Rua, número, bairro..." required>
+    </div>
 
-        <div class="input-group">
-            <label>Descrição</label>
-            <textarea rows="4" placeholder="Descreva o que está acontecendo..." required></textarea>
-        </div>
+    <div class="input-group">
+        <label>Descrição</label>
+        <textarea name="descricao" rows="4" placeholder="Descreva o que está acontecendo..." required></textarea>
+    </div>
 
-        <div class="input-group">
-            <label>Foto (opcional)</label>
-            <input type="file">
-        </div>
+    <div class="input-group">
+        <label>Foto (opcional)</label>
+        <input type="file" name="foto">
+    </div>
 
-        <div class="input-group">
-            <label>
-                <input type="checkbox"> Enviar denúncia anonimamente
-            </label>
-        </div>
+    <div class="input-group">
+        <label>
+            <input type="checkbox" name="anonimo" value="1" checked>
+            Enviar denúncia anonimamente
+        </label>
+    </div>
 
-        <button type="submit" class="btn">
-            <i class="fas fa-exclamation-triangle"></i> Enviar denúncia
-        </button>
+    <button type="submit" class="btn">
+        <i class="fas fa-exclamation-triangle"></i> Enviar denúncia
+    </button>
 
-    </form>
+</form>
+    
 
     <div class="alerta">
         ⚠️ Em casos graves, ligue para autoridades locais imediatamente.
