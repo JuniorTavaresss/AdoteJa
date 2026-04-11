@@ -25,29 +25,29 @@
 <!-- FORMULÁRIO -->
 <div class="container">
 
-    <form>
+   <form action="../php/salvar_perdipet.php" method="POST" enctype="multipart/form-data">
 
-        <label>📸 Foto do Pet</label>
-        <input type="file" accept="image/*">
+    <label>📸 Foto do Pet</label>
+    <input type="file" name="foto" accept="image/*">
 
-        <label>🐶 Nome do Pet</label>
-        <input type="text" placeholder="Ex: Thor">
+    <label>🐶 Nome do Pet</label>
+    <input type="text" name="nome_pet" placeholder="Ex: Thor" required>
 
-        <label>📍 Local onde foi perdido</label>
-        <input type="text" placeholder="Ex: Bairro Centro, Criciúma">
+    <label>📍 Local onde foi perdido</label>
+    <input type="text" name="local_perdido" placeholder="Ex: Bairro Centro, Criciúma" required>
 
-        <label>📅 Data</label>
-        <input type="date">
+    <label>📅 Data</label>
+    <input type="date" name="data_perdido" required>
 
-        <label>📞 Telefone para contato</label>
-        <input type="tel" placeholder="(48) 99999-9999">
+    <label>📞 Telefone para contato</label>
+    <input type="tel" name="telefone" placeholder="(48) 99999-9999" required>
 
-        <label>📝 Descrição</label>
-        <textarea placeholder="Cor, raça, tamanho, características..."></textarea>
+    <label>📝 Descrição</label>
+    <textarea name="descricao" placeholder="Cor, raça, tamanho, características..."></textarea>
 
-        <button type="submit">Registrar Pet Perdido</button>
+    <button type="submit">Registrar Pet Perdido</button>
 
-    </form>
+</form>
 
 </div>
 
