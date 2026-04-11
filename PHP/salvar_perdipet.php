@@ -7,11 +7,11 @@ if ($conn->connect_error) {
 }
 
 // Dados do formulário
-$nome_pet = $_POST['nome_pet'];
-$local_perdido = $_POST['local_perdido'];
-$data_perdido = $_POST['data_perdido'];
-$telefone = $_POST['telefone'];
-$descricao = $_POST['descricao'];
+$nome_pet = $_POST['nome_pet'] ?? '';
+$local_perdido = $_POST['local_perdido'] ?? '';
+$data_perdido = $_POST['data_perdido'] ?? '';
+$telefone = $_POST['telefone'] ?? '';
+$descricao = $_POST['descricao'] ?? '';
 
 // Caminho da foto
 $foto = "";
@@ -19,17 +19,22 @@ $foto = "";
 // Upload da imagem
 if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
 
-    $pasta = "../img/PerdiPet";
+    // PASTA CORRETA
+    $pasta = "../img/PerdiPet/";
 
+    // Cria se não existir
     if (!is_dir($pasta)) {
         mkdir($pasta, 0777, true);
     }
 
+    // Nome único
     $nomeArquivo = uniqid() . "_" . basename($_FILES['foto']['name']);
     $caminhoCompleto = $pasta . $nomeArquivo;
 
+    // Move o arquivo
     if (move_uploaded_file($_FILES['foto']['tmp_name'], $caminhoCompleto)) {
-        $foto = "img/Perdidos/" . $nomeArquivo;
+        // SALVA IGUAL À PASTA
+        $foto = "img/PerdiPet/" . $nomeArquivo;
     }
 }
 
@@ -65,9 +70,7 @@ if ($stmt->execute()) {
     </script>";
 }
 
-// Fecha conexão
 $stmt->close();
 $conn->close();
 
-?>
 ?>

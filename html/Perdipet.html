@@ -25,25 +25,25 @@
 <!-- FORMULÁRIO -->
 <div class="container">
 
-   <form action="../php/salvar_perdipet.php" method="POST" enctype="multipart/form-data">
+<form action="../php/salvar_perdipet.php" method="POST" enctype="multipart/form-data">
 
-    <label>📸 Foto do Pet</label>
-    <input type="file" name="foto" accept="image/*">
+    <label for="foto">📸 Foto do Pet</label>
+    <input type="file" id="foto" name="foto" accept="image/*" required>
 
-    <label>🐶 Nome do Pet</label>
-    <input type="text" name="nome_pet" placeholder="Ex: Thor" required>
+    <label for="nome_pet">🐶 Nome do Pet</label>
+    <input type="text" id="nome_pet" name="nome_pet" placeholder="Ex: Thor" required>
 
-    <label>📍 Local onde foi perdido</label>
-    <input type="text" name="local_perdido" placeholder="Ex: Bairro Centro, Criciúma" required>
+    <label for="local_perdido">📍 Local onde foi perdido</label>
+    <input type="text" id="local_perdido" name="local_perdido" placeholder="Ex: Bairro Centro, Criciúma" required>
 
-    <label>📅 Data</label>
-    <input type="date" name="data_perdido" required>
+    <label for="data_perdido">📅 Data</label>
+    <input type="date" id="data_perdido" name="data_perdido" required>
 
-    <label>📞 Telefone para contato</label>
-    <input type="tel" name="telefone" placeholder="(48) 99999-9999" required>
+    <label for="telefone">📞 Telefone para contato</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(48) 99999-9999" required>
 
-    <label>📝 Descrição</label>
-    <textarea name="descricao" placeholder="Cor, raça, tamanho, características..."></textarea>
+    <label for="descricao">📝 Descrição</label>
+    <textarea id="descricao" name="descricao" placeholder="Cor, raça, tamanho, características..."></textarea>
 
     <button type="submit">Registrar Pet Perdido</button>
 
