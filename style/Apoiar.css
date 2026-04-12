@@ -14,7 +14,7 @@
     width: 100%;
     padding: 15px;
     margin-bottom: 20px;
-    border: 2px solid #ff6b6b;
+    border: 2px solid #0066cc;
     border-radius: 12px;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
@@ -33,7 +33,7 @@
 
 .pix-info-box {
     background-color: #fff5f5;
-    border: 2px dashed #ff6b6b;
+    border: 2px dashed #0066cc;
     border-radius: 15px;
     padding: 25px;
     margin: 20px 0;
@@ -50,7 +50,7 @@
 .pix-key {
     font-weight: 700;
     font-size: 22px;
-    color: #ff6b6b;
+    color: #0066cc;
     word-break: break-all;
     margin: 15px 0;
     padding: 15px;
@@ -61,7 +61,7 @@
 }
 
 .copy-btn {
-    background-color: #ff6b6b;
+    background-color: #0066cc;
     color: white;
     border: none;
     padding: 15px;
@@ -76,7 +76,7 @@
 }
 
 .copy-btn:hover {
-    background-color: #ee5253;
+    background-color: #0066cc;
     transform: scale(1.02);
 }
 

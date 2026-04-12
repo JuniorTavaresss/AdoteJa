@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Doação | AdoteJá</title>
 
+<!-- Importando o CSS original do projeto -->
+<link rel="stylesheet" href="../style/Apoiar.css">
 <!-- Importando o novo CSS simplificado -->
 <link rel="stylesheet" href="../style/Apoiar.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -54,54 +56,8 @@
 
 </div>
 
-<script>
-    // BANCO DE DADOS DAS ONGS
-    const ongsCriciuma = [
-        { nome: "SOS Vira-Lata", pix: "11825120000144" },
-        { nome: "ONG Animal.com", pix: "31339925000195" },
-        { nome: "Grupo Unidos Pelos Animais", pix: "48999644565" },
-        { nome: "Amigo Bicho (Içara/Criciúma)", pix: "22941257000180" }
-    ];
-
-    // Carregar as ONGs no select
-    window.onload = function() {
-        const select = document.getElementById('ongSelect');
-        ongsCriciuma.forEach(ong => {
-            const option = document.createElement('option');
-            option.value = ong.pix;
-            option.text = ong.nome;
-            option.setAttribute('data-nome', ong.nome);
-            select.appendChild(option);
-        });
-    };
-
-    function updatePixInfo() {
-        const select = document.getElementById('ongSelect');
-        const pixBox = document.getElementById('pixBox');
-        const ongNomeDisplay = document.getElementById('ongNomeDisplay');
-        const pixKeyDisplay = document.getElementById('pixKeyDisplay');
-        
-        if (select.value) {
-            const selectedOption = select.options[select.selectedIndex];
-            ongNomeDisplay.innerText = selectedOption.getAttribute('data-nome');
-            pixKeyDisplay.innerText = select.value;
-            pixBox.style.display = 'block';
-        } else {
-            pixBox.style.display = 'none';
-        }
-    }
-
-    function copyPix() {
-        const pixKey = document.getElementById('pixKeyDisplay').innerText;
-        navigator.clipboard.writeText(pixKey).then(() => {
-            const tooltip = document.getElementById("myTooltip");
-            tooltip.innerHTML = "Copiado!";
-            setTimeout(() => {
-                tooltip.innerHTML = "Copiar para área de transferência";
-            }, 2000);
-        });
-    }
-</script>
+<!-- Importando a lógica JavaScript externa -->
+<script src="../javascript/Apoiar.js"></script>
 
 </body>
 </html>
