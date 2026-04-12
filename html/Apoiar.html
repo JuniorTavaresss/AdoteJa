@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Doação | AdoteJá</title>
 
+<!-- Importando o novo CSS simplificado -->
 <link rel="stylesheet" href="../style/Apoiar.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -18,35 +19,89 @@
 
 <!-- HEADER -->
 <div class="header">
-    🐾 Doação para ONGs - AdoteJá
+    🐾 Doação para ONGs de Criciúma
 </div>
 
 <!-- CONTEÚDO -->
 <div class="container">
 
     <h2>Ajude um Pet 🐶</h2>
-    <p>Todo o valor arrecadado será destinado às ONGs parceiras para ajudar cães resgatados.</p>
+    <p>Escolha uma ONG de Criciúma abaixo e faça sua doação via PIX diretamente para eles.</p>
 
-    <!-- VALORES -->
-    <div class="valores">
-        <button>R$10</button>
-        <button>R$25</button>
-        <button>R$50</button>
-        <button>R$100</button>
+    <!-- SELEÇÃO DE ONG -->
+    <div class="section-title">1. Escolha a ONG</div>
+    <select id="ongSelect" class="select-ong" onchange="updatePixInfo()">
+        <option value="">Selecione uma ONG...</option>
+        <!-- Opções inseridas via JS -->
+    </select>
+
+    <!-- BOX DE INFORMAÇÕES DO PIX -->
+    <div id="pixBox" class="pix-info-box">
+        <div class="section-title" style="margin-top: 0; color: #ff6b6b;">2. Chave PIX</div>
+        <p style="margin-bottom: 5px; font-size: 18px;">ONG: <strong id="ongNomeDisplay"></strong></p>
+        <div class="pix-key" id="pixKeyDisplay"></div>
+        
+        <div class="tooltip">
+            <button class="copy-btn" onclick="copyPix()">Copiar Chave PIX 📋</button>
+            <span class="tooltiptext" id="myTooltip">Copiar para área de transferência</span>
+        </div>
+        <p style="font-size: 12px; color: #888; margin-top: 15px;">Abra o app do seu banco e use a opção "PIX Copia e Cola" ou "Chave PIX".</p>
     </div>
 
-    <!-- FORM -->
-    <input type="text" placeholder="Seu nome">
-    <input type="email" placeholder="Seu e-mail">
-    <input type="number" placeholder="Valor personalizado (R$)">
-
-    <button class="btn-doar">Fazer Doação ❤️</button>
-
-    <div class="info">
-        🔒 Doação segura • 100% destinada às ONGs
+    <div class="info" style="margin-top: 30px;">
+        🔒 Doação direta e segura • 100% destinada às ONGs
     </div>
 
 </div>
+
+<script>
+    // BANCO DE DADOS DAS ONGS
+    const ongsCriciuma = [
+        { nome: "SOS Vira-Lata", pix: "11825120000144" },
+        { nome: "ONG Animal.com", pix: "31339925000195" },
+        { nome: "Grupo Unidos Pelos Animais", pix: "48999644565" },
+        { nome: "Amigo Bicho (Içara/Criciúma)", pix: "22941257000180" }
+    ];
+
+    // Carregar as ONGs no select
+    window.onload = function() {
+        const select = document.getElementById('ongSelect');
+        ongsCriciuma.forEach(ong => {
+            const option = document.createElement('option');
+            option.value = ong.pix;
+            option.text = ong.nome;
+            option.setAttribute('data-nome', ong.nome);
+            select.appendChild(option);
+        });
+    };
+
+    function updatePixInfo() {
+        const select = document.getElementById('ongSelect');
+        const pixBox = document.getElementById('pixBox');
+        const ongNomeDisplay = document.getElementById('ongNomeDisplay');
+        const pixKeyDisplay = document.getElementById('pixKeyDisplay');
+        
+        if (select.value) {
+            const selectedOption = select.options[select.selectedIndex];
+            ongNomeDisplay.innerText = selectedOption.getAttribute('data-nome');
+            pixKeyDisplay.innerText = select.value;
+            pixBox.style.display = 'block';
+        } else {
+            pixBox.style.display = 'none';
+        }
+    }
+
+    function copyPix() {
+        const pixKey = document.getElementById('pixKeyDisplay').innerText;
+        navigator.clipboard.writeText(pixKey).then(() => {
+            const tooltip = document.getElementById("myTooltip");
+            tooltip.innerHTML = "Copiado!";
+            setTimeout(() => {
+                tooltip.innerHTML = "Copiar para área de transferência";
+            }, 2000);
+        });
+    }
+</script>
 
 </body>
 </html>

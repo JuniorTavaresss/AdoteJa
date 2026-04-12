@@ -1,153 +1,111 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* --- ESTILOS SIMPLIFICADOS PARA ONGS E PIX --- */
 
-body {
-    font-family: "Inter", Arial, sans-serif;
-    background: #f5f7fa;
-}
-
-/* HEADER */
-.header {
-    background: #003366;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 500px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* TÍTULO */
-.container h2 {
-    text-align: center;
-    color: #003366;
-    margin-bottom: 10px;
-}
-
-/* TEXTO */
-.container p {
-    text-align: center;
+.section-title {
     font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    font-weight: 700;
 }
 
-/* VALORES */
-.valores {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-.valores button {
-    width: 22%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid #003366;
-    background: white;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.valores button:hover {
-    background: #003366;
-    color: white;
-}
-
-/* INPUT */
-input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-}
-
-/* BOTÃO */
-.btn-doar {
+.select-ong {
     width: 100%;
     padding: 15px;
-    background: #ff6b00;
-    border: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ff6b6b;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #fff;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-doar:hover {
-    background: #e65c00;
-}
-
-/* INFO */
-.info {
-    margin-top: 15px;
-    font-size: 13px;
-    color: #777;
+    color: #333;
+    transition: all 0.3s ease;
     text-align: center;
 }
 
-/* MENU */
-.menu {
-    display: flex;
-    justify-content: space-between; /* logo esquerda / menu direita */
-    align-items: center;
-    padding: 15px 40px;
-    background: #003366; /* azul */
+.select-ong:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
 }
 
-/* LOGO (AdoteJá) */
-.logo {
-    font-size: 22px;
+.pix-info-box {
+    background-color: #fff5f5;
+    border: 2px dashed #ff6b6b;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    text-align: center;
+    display: none; /* Escondido até selecionar uma ONG */
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.pix-key {
     font-weight: 700;
-    color: #ffffff;
-    text-decoration: none;
+    font-size: 22px;
+    color: #ff6b6b;
+    word-break: break-all;
+    margin: 15px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ffe0e0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* LISTA */
-.menu ul {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-/* LINKS */
-.menu ul li a {
-    text-decoration: none;
+.copy-btn {
+    background-color: #ff6b6b;
     color: white;
-    font-weight: 500;
-    transition: 0.3s;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.3s;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* HOVER LINKS */
-.menu ul li a:hover {
-    color: #ff6b00; /* laranja */
+.copy-btn:hover {
+    background-color: #ee5253;
+    transform: scale(1.02);
 }
 
-/* BOTÃO LOGIN */
-.btn-login {
-    background: #ff6b00;
-    padding: 8px 15px;
-    border-radius: 8px;
-    color: white !important;
+/* Tooltip para feedback de cópia */
+.tooltip {
+    position: relative;
+    display: block;
+    width: 100%;
 }
 
-/* HOVER LOGIN */
-.btn-login:hover {
-    background: #e65c00;
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -90px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
