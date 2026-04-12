@@ -16,12 +16,12 @@
 
 <!-- MENU SUPERIOR -->
 <nav class="menu">
-    <a href="index.html" class="logo">🐶 AdoteJá</a>
+    <a href="index.html" class="logo" title="Voltar para a página inicial">🐶 AdoteJá</a>
     <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="html/adocao.html">Adotar</a></li>
-        <li><a href="html/denuncia.html">Denúncias</a></li>
-        <li><a href="html/Telalogin.html" class="btn-login">Login</a></li>
+        <li><a href="#" title="Ir para o início da página">Início</a></li>
+        <li><a href="html/adocao.html" title="Veja os animais disponíveis para adoção">Adotar</a></li>
+        <li><a href="html/denuncia.html" title="Relate casos de maus-tratos ou abandono">Denúncias</a></li>
+        <li><a href="html/Telalogin.html" class="btn-login" title="Acesse sua conta ou cadastre-se">Login</a></li>
     </ul>
 </nav>
 
@@ -36,38 +36,38 @@
         <p>Conectamos você a pets e ONGs com segurança</p>
 
         <div class="hero-buttons">
-            <a href="html/adocao.html" class="btn">Adotar agora</a>
-            <a href="html/denuncia.html" class="btn-outline">Denunciar</a>
+            <a href="html/adocao.html" class="btn" title="Clique para encontrar seu novo melhor amigo">Adotar agora</a>
+            <a href="html/denuncia.html" class="btn-outline" title="Denuncie maus-tratos de forma segura">Denunciar</a>
         </div>
     </div>
 
 
     <!-- 🔥 ÍCONE DE MENU PARA ABRIR O MENU LATERAL -->
-    <div class="menu-trigger" id="menuTrigger">☰</div>
+    <div class="menu-trigger" id="menuTrigger" title="Clique para abrir o menu de opções">☰</div>
 
     <!-- 🔥 MENU LATERAL VERTICAL (ESCONDIDO À ESQUERDA) -->
     <div class="sidebar" id="sidebar">
-        <div class="item" onclick="location.href='html/adocao.html'">
+        <div class="item" onclick="location.href='html/adocao.html'" title="Ver pets para adoção">
             <img src="https://cdn-icons-png.flaticon.com/128/616/616408.png">
             <p>ADOTAR</p>
         </div>
-        <div class="item" onclick="location.href='html/Apoiar.html'">
+        <div class="item" onclick="location.href='html/Apoiar.html'" title="Saiba como ajudar nossas causas">
             <img src="https://cdn-icons-png.flaticon.com/128/1046/1046784.png">
             <p>APOIAR</p>
         </div>
-        <div class="item" onclick="location.href='html/Feiras.html'">
+        <div class="item" onclick="location.href='html/Feiras.html'" title="Confira as próximas feiras de adoção">
             <img src="https://cdn-icons-png.flaticon.com/128/747/747310.png">
             <p>FEIRAS</p>
         </div>
-        <div class="item" onclick="location.href='html/Perdipet.html'">
+        <div class="item" onclick="location.href='html/Perdipet.html'" title="Encontrou ou perdeu um pet? Clique aqui">
             <img src="https://cdn-icons-png.flaticon.com/128/149/149060.png">
             <p>PERDI PET</p>
         </div>
-        <div class="item" onclick="location.href='html/denuncia.html'">
+        <div class="item" onclick="location.href='html/denuncia.html'" title="Fazer uma denúncia de maus-tratos">
             <img src="https://cdn-icons-png.flaticon.com/128/709/709496.png">
             <p>DENÚNCIA</p>
         </div>
-        <div class="item" onclick="location.href='html/Telalogin.html'">
+        <div class="item" onclick="location.href='html/Telalogin.html'" title="Entrar na sua conta">
             <img src="https://cdn-icons-png.flaticon.com/128/942/942748.png">
             <p>LOGIN</p>
         </div>
@@ -78,18 +78,15 @@
 
 <!-- ESTATÍSTICAS (RODAPÉ COMPACTO) -->
 <section class="stats">
-    <div><h2>+170</h2><p>Adoções</p></div>
-    <div><h2>+500</h2><p>Resgates</p></div>
-    <div><h2>+1200</h2><p>Atendimentos</p></div>
+    <div title="Total de animais que encontraram um lar"><h2>+170</h2><p>Adoções</p></div>
+    <div title="Animais resgatados das ruas"><h2>+500</h2><p>Resgates</p></div>
+    <div title="Atendimentos realizados pela nossa rede"><h2>+1200</h2><p>Atendimentos</p></div>
 </section>
 
 <!-- 🔥 ARQUIVO JAVASCRIPT EXTERNO -->
 <script src="javascript/adocao.js"></script>
 <script src="javascript/Index.js"></script>
-
-
-
-
+<script src="javascript/tooltips.js"></script>
 
 </body>
 </html>
