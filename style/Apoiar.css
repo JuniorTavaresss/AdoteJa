@@ -1,73 +1,180 @@
-/* --- ESTILOS SIMPLIFICADOS PARA ONGS E PIX --- */
+/* --- VARIÁVEIS CSS --- */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #ff6b6b;
+    --secondary-color-rgb: 255, 107, 107; /* Adicionado para funcionar com rgba() */
+    --light-bg-color: #fff5f5;
+    --text-color-dark: #333;
+    --text-color-medium: #888;
+    --text-color-light: #fff;
+    --border-radius-medium: 12px;
+    --border-radius-large: 15px;
+    --spacing-small: 10px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+    --font-size-small: 12px;
+    --font-size-base: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 22px;
+    --font-size-section-title: 14px;
+}
+
+/* --- ESTILOS GERAIS E LAYOUT --- */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color-dark);
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f7f6;
+}
+
+.container {
+    max-width: 800px;
+    margin: var(--spacing-large) auto;
+    padding: var(--spacing-large);
+    background-color: var(--text-color-light);
+    border-radius: var(--border-radius-large);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+.header-main {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: var(--spacing-medium) 0;
+    text-align: center;
+}
+
+/* Suporte para a classe .header antiga caso o HTML não tenha sido atualizado */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: var(--spacing-medium);
+    text-align: center;
+    font-size: var(--font-size-large);
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: var(--spacing-small);
+}
+
+.logo {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-size: var(--font-size-large);
+    font-weight: 700;
+}
+
+.header-title {
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    margin-top: var(--spacing-small);
+}
+
+/* --- SEÇÕES DE CONTEÚDO --- */
+.donation-intro h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-small);
+}
+
+.donation-intro p {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+}
 
 .section-title {
-    font-size: 14px;
+    font-size: var(--font-size-section-title);
     text-transform: uppercase;
-    color: #888;
+    color: var(--text-color-medium);
     letter-spacing: 1px;
-    margin: 20px 0 10px 0;
+    margin: var(--spacing-large) 0 var(--spacing-small) 0;
     text-align: center;
     font-weight: 700;
 }
 
+/* --- SELEÇÃO DE ONG --- */
 .select-ong {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 2px solid #0066cc;
-    border-radius: 12px;
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius-medium);
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: var(--font-size-medium);
     font-weight: 600;
-    background-color: #fff;
+    background-color: var(--text-color-light);
     cursor: pointer;
-    color: #333;
+    color: var(--text-color-dark);
     transition: all 0.3s ease;
     text-align: center;
 }
 
 .select-ong:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+    /* Corrigido: usando valores RGB para o rgba */
+    box-shadow: 0 0 var(--spacing-small) rgba(var(--secondary-color-rgb), 0.3);
 }
 
+/* --- BOX DE INFORMAÇÕES DO PIX --- */
 .pix-info-box {
-    background-color: #fff5f5;
-    border: 2px dashed #0066cc;
-    border-radius: 15px;
+    background-color: var(--light-bg-color);
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--border-radius-large);
     padding: 25px;
-    margin: 20px 0;
+    margin: var(--spacing-large) 0;
     text-align: center;
     display: none; /* Escondido até selecionar uma ONG */
     animation: fadeIn 0.4s ease-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
+    from { opacity: 0; transform: translateY(-var(--spacing-small)); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.pix-key-title {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.ong-name-display {
+    margin-bottom: 5px;
+    font-size: var(--font-size-medium);
 }
 
 .pix-key {
     font-weight: 700;
-    font-size: 22px;
-    color: #0066cc;
+    font-size: var(--font-size-large);
+    color: var(--primary-color);
     word-break: break-all;
-    margin: 15px 0;
-    padding: 15px;
-    background: #fff;
-    border-radius: 10px;
+    margin: var(--spacing-medium) 0;
+    padding: var(--spacing-medium);
+    background: var(--text-color-light);
+    border-radius: var(--spacing-small);
     border: 1px solid #ffe0e0;
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
+.pix-info-text {
+    font-size: var(--font-size-small);
+    color: var(--text-color-medium);
+    margin-top: var(--spacing-medium);
+}
+
+/* --- BOTÃO DE COPIAR --- */
 .copy-btn {
-    background-color: #0066cc;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     border: none;
-    padding: 15px;
-    border-radius: 10px;
+    padding: var(--spacing-medium);
+    border-radius: var(--spacing-small);
     cursor: pointer;
-    font-size: 16px;
+    font-size: var(--font-size-base);
     font-weight: 700;
     transition: all 0.3s;
     width: 100%;
@@ -76,11 +183,11 @@
 }
 
 .copy-btn:hover {
-    background-color: #0066cc;
+    background-color: var(--primary-color);
     transform: scale(1.02);
 }
 
-/* Tooltip para feedback de cópia */
+/* --- TOOLTIP --- */
 .tooltip {
     position: relative;
     display: block;
@@ -90,8 +197,8 @@
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 180px;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--text-color-dark);
+    color: var(--text-color-light);
     text-align: center;
     border-radius: 6px;
     padding: 8px;
@@ -102,10 +209,26 @@
     margin-left: -90px;
     opacity: 0;
     transition: opacity 0.3s;
-    font-size: 14px;
+    font-size: var(--font-size-base);
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+/* --- INFORMAÇÕES DE SEGURANÇA --- */
+.info-security {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--text-color-medium);
+    font-size: var(--font-size-small);
+}
+
+/* Suporte para a classe .info antiga */
+.info {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--text-color-medium);
+    font-size: var(--font-size-small);
 }

@@ -1,63 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doação | AdoteJá</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação | AdoteJá</title>
 
-<!-- Importando o CSS original do projeto -->
-<link rel="stylesheet" href="../style/Apoiar.css">
-<!-- Importando o novo CSS simplificado -->
-<link rel="stylesheet" href="../style/Apoiar.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Importando o CSS do projeto -->
+    <link rel="stylesheet" href="../style/Apoiar.css">
 </head>
-
 <body>
 
-<!-- MENU -->
-<nav class="menu">
-    <a href="../index.html" class="logo">🐶 AdoteJá</a>
-</nav>
-
-<!-- HEADER -->
-<div class="header">
-    🐾 Doação para ONGs de Criciúma
-</div>
-
-<!-- CONTEÚDO -->
-<div class="container">
-
-    <h2>Ajude um Pet 🐶</h2>
-    <p>Escolha uma ONG de Criciúma abaixo e faça sua doação via PIX diretamente para eles.</p>
-
-    <!-- SELEÇÃO DE ONG -->
-    <div class="section-title">1. Escolha a ONG</div>
-    <select id="ongSelect" class="select-ong" onchange="updatePixInfo()">
-        <option value="">Selecione uma ONG...</option>
-        <!-- Opções inseridas via JS -->
-    </select>
-
-    <!-- BOX DE INFORMAÇÕES DO PIX -->
-    <div id="pixBox" class="pix-info-box">
-        <div class="section-title" style="margin-top: 0; color: #ff6b6b;">2. Chave PIX</div>
-        <p style="margin-bottom: 5px; font-size: 18px;">ONG: <strong id="ongNomeDisplay"></strong></p>
-        <div class="pix-key" id="pixKeyDisplay"></div>
-        
-        <div class="tooltip">
-            <button class="copy-btn" onclick="copyPix()">Copiar Chave PIX 📋</button>
-            <span class="tooltiptext" id="myTooltip">Copiar para área de transferência</span>
+    <!-- Cabeçalho da página com o menu de navegação -->
+    <header class="header-main">
+        <nav class="menu">
+            <a href="../index.html" class="logo">🐶 AdoteJá</a>
+        </header>
+        <div class="header-title">
+            🐾 Doação para ONGs de Criciúma
         </div>
-        <p style="font-size: 12px; color: #888; margin-top: 15px;">Abra o app do seu banco e use a opção "PIX Copia e Cola" ou "Chave PIX".</p>
-    </div>
+    </nav>
 
-    <div class="info" style="margin-top: 30px;">
-        🔒 Doação direta e segura • 100% destinada às ONGs
-    </div>
+    <!-- Conteúdo principal da página -->
+    <main class="container">
 
-</div>
+        <section class="donation-intro">
+            <h2>Ajude um Pet 🐶</h2>
+            <p>Escolha uma ONG de Criciúma abaixo e faça sua doação via PIX diretamente para eles.</p>
+        </section>
 
-<!-- Importando a lógica JavaScript externa -->
-<script src="../javascript/Apoiar.js"></script>
+        <section class="ong-selection">
+            <div class="section-title">1. Escolha a ONG</div>
+            <select id="ongSelect" class="select-ong" onchange="updatePixInfo()">
+                <option value="">Selecione uma ONG...</option>
+                <!-- Opções inseridas via JS -->
+            </select>
+        </section>
+
+        <!-- Box de informações do PIX -->
+        <aside id="pixBox" class="pix-info-box">
+            <div class="section-title pix-key-title">2. Chave PIX</div>
+            <p class="ong-name-display">ONG: <strong id="ongNomeDisplay"></strong></p>
+            <div class="pix-key" id="pixKeyDisplay"></div>
+            
+            <div class="tooltip">
+                <button class="copy-btn" onclick="copyPix()">Copiar Chave PIX 📋</button>
+                <span class="tooltiptext" id="myTooltip">Copiar para área de transferência</span>
+            </div>
+            <p class="pix-info-text">Abra o app do seu banco e use a opção "PIX Copia e Cola" ou "Chave PIX".</p>
+        </aside>
+
+        <div class="info-security">
+            🔒 Doação direta e segura • 100% destinada às ONGs
+        </div>
+
+    </main>
+
+    <!-- Importando a lógica JavaScript externa -->
+    <script src="../javascript/Apoiar.js"></script>
 
 </body>
 </html>
