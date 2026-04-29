@@ -18,22 +18,45 @@
             <label>Nome do cão</label>
             <input type="text" id="nome" required>
 
-            <label>Raça</label>
-            <input type="text" id="raca" required>
-
-            <label>Idade</label>
-            <input type="number" id="idade" min="0" required>
-
-            <label>Tamanho</label>
+<label>sexo</label>
             <select id="tamanho" required>
+                <option value="">Selecione</option>
+                <option value="Macho">Macho</option>
+                <option value="Femea">Femea</option>
+            </select>
+
+            <label>Raça</label>
+            <select id="tamanho" required>
+                <option value="">Selecione</option>
+                <option value="Vira-lata">Vira-lata</option>
+                <option value="Labrador">Labrador</option>
+                <option value="Golden Retriever">Golden Retriever</option>
+                <option value="Pastor Alemao">Pastor Alemao</option>
+                <option value="Bulldog">Bulldog</option>
+                <option value="Poodle">Poodle</option>
+            </select>
+
+          <label>Porte</label>
+            <select id="Porte" required>
                 <option value="">Selecione</option>
                 <option value="Pequeno">Pequeno</option>
                 <option value="Médio">Médio</option>
                 <option value="Grande">Grande</option>
             </select>
+            
+            
+            <label>idade</label>
+ <input type="text" id="idade" required>
+                
+            </select>
 
             <label>Cidade</label>
-            <input type="text" id="cidade" required>
+            <select id="tamanho" required>
+                <option value="">Selecione</option>
+                <option value="Criciuma SC">Criciuma SC</option>
+                <option value="Urussanga SC">Urussanga SC</option>
+                <option value="Cocal SC">Cocal SC</option>
+            </select>
 
             <label>Castrado</label>
             <select id="castrado" required>
@@ -41,9 +64,6 @@
                 <option value="Sim">Sim</option>
                 <option value="Não">Não</option>
             </select>
-
-            <label>Descrição</label>
-            <textarea id="descricao" rows="4" required></textarea>
 
             <label>Foto do cão</label>
             <input type="file" id="foto" accept="image/*">

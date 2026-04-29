@@ -446,22 +446,3 @@ body {
     background-color: #00a844;
     transform: translateY(-2px);
 }
-.btn-cadastrar-cao {
-    background: linear-gradient(135deg, #00c853, #00a844);
-    color: white;
-    border: none;
-    padding: 14px 26px;
-    border-radius: 40px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 18px rgba(0, 200, 83, 0.35);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-cadastrar-cao::before {
-    content: "🐶";
-    font-size: 16px;
