@@ -7,26 +7,25 @@
     <link rel="stylesheet" href="../style/CadastrarCao.css">
 </head>
 <body>
-
     <header class="navbar">
         <a href="../Index.html" class="logo-topo">🐶 AdoteJá</a>
     </header>
     <main class="container">
-        <form id="formCadastrarCao" class="formulario">
+        <form id="formCadastrarCao" class="formulario" enctype="multipart/form-data">
             <h1>Cadastrar Novo Cão</h1>
 
             <label>Nome do cão</label>
-            <input type="text" id="nome" required>
+            <input type="text" id="nome" name="nome" required>
 
-<label>sexo</label>
-            <select id="tamanho" required>
+            <label>Sexo</label>
+            <select id="sexo" name="sexo" required>
                 <option value="">Selecione</option>
                 <option value="Macho">Macho</option>
                 <option value="Femea">Femea</option>
             </select>
 
             <label>Raça</label>
-            <select id="tamanho" required>
+            <select id="raca" name="raca" required>
                 <option value="">Selecione</option>
                 <option value="Vira-lata">Vira-lata</option>
                 <option value="Labrador">Labrador</option>
@@ -36,22 +35,19 @@
                 <option value="Poodle">Poodle</option>
             </select>
 
-          <label>Porte</label>
-            <select id="Porte" required>
+            <label>Porte</label>
+            <select id="porte" name="porte" required>
                 <option value="">Selecione</option>
                 <option value="Pequeno">Pequeno</option>
                 <option value="Médio">Médio</option>
                 <option value="Grande">Grande</option>
             </select>
             
-            
-            <label>idade</label>
- <input type="text" id="idade" required>
-                
-            </select>
+            <label>Idade</label>
+            <input type="text" id="idade" name="idade" required>
 
             <label>Cidade</label>
-            <select id="tamanho" required>
+            <select id="cidade" name="cidade" required>
                 <option value="">Selecione</option>
                 <option value="Criciuma SC">Criciuma SC</option>
                 <option value="Urussanga SC">Urussanga SC</option>
@@ -59,19 +55,20 @@
             </select>
 
             <label>Castrado</label>
-            <select id="castrado" required>
+            <select id="castrado" name="castrado" required>
                 <option value="">Selecione</option>
                 <option value="Sim">Sim</option>
                 <option value="Não">Não</option>
             </select>
 
             <label>Foto do cão</label>
-            <input type="file" id="foto" accept="image/*">
+            <input type="file" id="foto" name="foto" accept="//.jpg, //.jpeg, //.png" required>
+
+             <div id="preview"></div>
 
             <button type="submit">Cadastrar</button>
         </form>
     </main>
-
     <script src="../javascript/CadastrarCao.js"></script>
 </body>
 </html>
