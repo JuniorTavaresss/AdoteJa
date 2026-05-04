@@ -70,7 +70,7 @@ if (isset($_FILES['foto']) && $_FILES['foto']['error'] !== UPLOAD_ERR_NO_FILE) {
         exit;
     }
 
-    $diretorioFisico = _DIR_ . '/../img/pets/';
+    $diretorioFisico = __DIR__ . '/../img/pets/';
     if (!is_dir($diretorioFisico) && !mkdir($diretorioFisico, 0777, true)) {
         http_response_code(500);
         echo json_encode([

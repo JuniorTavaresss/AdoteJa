@@ -1,3 +1,5 @@
+console.log('JS carregado');
+
 document.getElementById('formCadastrarCao').addEventListener('submit', async function(e) {
     e.preventDefault();
     
@@ -44,16 +46,19 @@ document.getElementById('foto').addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (file) {
         const reader = new FileReader();
-        reader.onload = function(e) {
-            // Verificar se já existe uma preview
-            let preview = document.querySelector('.preview-imagem');
-            if (!preview) {
-                preview = document.createElement('div');
-                preview.className = 'preview-imagem';
-                document.querySelector('.formulario').insertBefore(preview, document.querySelector('button'));
-            }
-            preview.innerHTML = `<img src="${e.target.result}" alt="Preview" style="max-width: 200px; margin: 10px 0;">`;
-        };
+reader.onload = function(e) {
+    // Verificar se já existe uma preview
+    let preview = document.querySelector('.preview-imagem');
+
+    if (!preview) {
+        preview = document.createElement('div');
+        preview.className = 'preview-imagem';
+        document.querySelector('.formulario')
+            .insertBefore(preview, document.querySelector('button'));
+    }
+
+    preview.innerHTML = `<img src="${e.target.result}" alt="Preview" style="max-width: 200px; margin: 10px 0;">`;
+};
         reader.readAsDataURL(file);
     }
 });
